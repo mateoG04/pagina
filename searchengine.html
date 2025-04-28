@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Redimidos de Jesús</title>
+    <link rel="icon" type="image/jpg" href="logo.png">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="searchengine.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidehead">
+                <div class="dots">
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle" style="color: #333;"></i>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <hr style="margin: 15px 0; border: 1px solid #eee;">
+            </div>
+            <div class="sidebody" style="height: 69vh;">
+                <div class="searchbar">
+                    <input placeholder="Buscar..." id="searchBar" name="searchBar" type="text">
+                    <i class="fa-solid fa-magnifying-glass glass"></i>
+                </div>
+            </div>
+            <div class="sidefoot">
+                <hr style="margin: 15px 0; border: 1px solid #eee;">
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-square-github"></i>
+                </div>
+            </div>
+        </div>
+        <div class="data">
+            <div class="top">
+                <p>Credenciales del Ministerio</p>
+                <p>Los Redimidos De Jesús</p>
+            </div>
+            <div class="header">
+                <p>CREDENCIALES</p>
+            </div>
+            <div class="body">
+                <div id="root"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <div id="root"></div>
+        <!-- Nueva sección para mostrar ambas imágenes juntas -->
+        <div id="displayCredentials" class="credentials-display"></div>
+    </div>
+
+
+    <script>
+        const product = [
+            {
+                id: 0,
+                coverImage: 'image/omarportada.png',
+                frontImage: 'image/omar1.png',
+                backImage: 'image/omar2.png',
+                title: 'Omar Antonio Méndez',
+                title2: 'Pastor General/Obispo',
+            },
+            {
+                id: 1,
+                coverImage: 'image/charlyportada.png',
+                frontImage: 'image/charly1.png',
+                backImage: 'image/charly2.png',
+                title: 'Carlos Portela',
+                title2: 'Pastor/Maestro',
+            },
+            {
+                id: 2,
+                coverImage: 'image/gustavoportada.png',
+                frontImage: 'image/gustavo1.png',
+                backImage: 'image/gustavo2.png',
+                title: 'Gustavo Roberto Gioia',
+                title2: 'Pastor ordenado',
+            },
+            {
+                id: 3,
+                coverImage: 'image/marianaportada.png',
+                frontImage: 'image/mariana1.png',
+                backImage: 'image/mariana2.png',
+                title: 'Mariana Moreno',
+                title2: 'Pastora ordenada',
+            },
+            {
+                id: 4,
+                coverImage: 'image/martaportada.png',
+                frontImage: 'image/marta1.png',
+                backImage: 'image/marta2.png',
+                title: 'Marta Carro',
+                title2: 'Evangelista',
+            },
+            {
+                id: 5,
+                coverImage: 'image/noeliaportada.png',
+                frontImage: 'image/noelia1.png',
+                backImage: 'image/noelia2.png',
+                title: 'Noelia Acosta',
+                title2: 'Anciana',
+            },
+            {
+                id: 6,
+                coverImage: 'image/marianoportada.png',
+                frontImage: 'image/mariano1.png',
+                backImage: 'image/mariano2.png',
+                title: 'mariano kler',
+                title2: 'Anciano',
+            },
+            {
+                id: 7,
+                coverImage: 'image/saraportada.png',
+                frontImage: 'image/sara1.png',
+                backImage: 'image/sara2.png',
+                title: 'Sara Mareco',
+                title2: 'Anciana',
+            },
+            {
+                id: 8,
+                coverImage: 'image/andresportada.png',
+                frontImage: 'image/andres1.png',
+                backImage: 'image/andres2.png',
+                title: 'Andrés Mareco',
+                title2: 'Pastor',
+            },
+            {
+                id: 9,
+                coverImage: 'image/lauraportada.png',
+                frontImage: 'image/laura1.png',
+                backImage: 'image/laura2.png',
+                title: 'Laura Núñez',
+                title2: 'Anciana',
+            },
+            {
+                id: 10,
+                coverImage: 'image/orlandoportada.png',
+                frontImage: 'image/orlando1.png',
+                backImage: 'image/orlando2.png',
+                title: 'Orlando Nuñez',
+                title2: 'Evangelista',
+            },
+            {
+                id: 11,
+                coverImage: 'image/carolinaportada.png',
+                frontImage: 'image/carolina1.png',
+                backImage: 'image/carolina2.png',
+                title: 'Carolina kler',
+                title2: 'Anciana',
+            },
+            {
+                id: 12,
+                coverImage: 'image/ramónportada.png',
+                frontImage: 'image/ramon1.png',
+                backImage: 'image/ramon2.png',
+                title: 'Ramón Silveira',
+                title2: 'Anciano',
+            },
+            {
+                id: 13,
+                coverImage: 'image/silvinaportada.png',
+                frontImage: 'image/silvina1.png',
+                backImage: 'image/silvina2.png',
+                title: 'Silvina Espíndola',
+                title2: 'Anciana',
+            },
+            {
+                id: 14,
+                coverImage: 'image/carmenargentoportada.png',
+                frontImage: 'image/carmen1.png',
+                backImage: 'image/carmen2.png',
+                title: 'Estela Carmen Argento',
+                title2: 'Pastora de obra',
+            },
+            {
+                id: 15,
+                coverImage: 'image/carlosportada.png',
+                frontImage: 'image/carlos1.png',
+                backImage: 'image/carlos2.png',
+                title: 'Juan Carlos sabatino',
+                title2: 'Pastor',
+            },
+            {
+                id: 16,
+                coverImage: 'image/aliciaLportada.png',
+                frontImage: 'image/aliciaL1.png',
+                backImage: 'image/aliciaL2.png',
+                title: 'Alicia Lucrecia Piacquadio',
+                title2: 'Pastora',
+            },
+            {
+                id: 17,
+                coverImage: 'image/jorgeportada.png',
+                frontImage: 'image/jorge1.png',
+                backImage: 'image/jorge2.png',
+                title: 'Jorge Toba',
+                title2: 'Pastor de obra',
+            },
+            {
+                id: 18,
+                coverImage: 'image/karinaportada.png',
+                frontImage: 'image/karina1.png',
+                backImage: 'image/karina2.png',
+                title: 'Karina Susana Troncoso',
+                title2: 'Pastora de obra',
+            },
+            {
+                id: 19,
+                coverImage: 'image/albertoportada.png',
+                frontImage: 'image/alberto1.png',
+                backImage: 'image/alberto2.png',
+                title: 'Luis Alberto Scarlato',
+                title2: 'Pastor de obra',
+            },
+            {
+                id: 20,
+                coverImage: 'image/Sabrinaportada.png',
+                frontImage: 'image/sabrina1.png',
+                backImage: 'image/sabrina2.png',
+                title: 'Sabrina Noemi Alegre',
+                title2: 'Pastora de obra',
+            },
+            
+        ];
+
+        const categories = [...new Set(product.map((item) => { return item }))]
+
+document.getElementById('searchBar').addEventListener('keyup', (e) => {
+    const searchData = e.target.value.toLowerCase();
+    const filteredData = categories.filter((item) => {
+        return (
+            item.title.toLowerCase().includes(searchData)
+        )
+    })
+    displayItem(filteredData)
+});
+
+const displayItem = (items) => {
+    document.getElementById('root').innerHTML = items.map((item) => {
+        var { coverImage, frontImage, backImage, title, title2 } = item;
+        return (
+            `<div class='box'>
+        <div class='img-box'>
+        <img class='images' src=${coverImage}></img> <!-- Mostramos la portada aquí -->
+        </div> 
+        <div class='bottom'>
+        <p>${title}</p>
+        <p>${title2}</p>
+        <button onclick="openImages('${frontImage}', '${backImage}')">Ver credencial</button>
+        </div>
+    </div>`
+        )
+    }).join('')
+};
+
+// Función para mostrar ambas imágenes con botones de descarga y un botón de "Salir"
+function openImages(frontImage, backImage) {
+    const displayCredentials = document.getElementById('displayCredentials');
+    
+    // Insertamos el botón "Salir" y las dos imágenes con sus botones de descarga
+    displayCredentials.innerHTML = `
+        <div class="exit-section">
+            <button onclick="closeCredentials()">Salir</button>
+        </div>
+        <div class="credential-section">
+            <img src="${frontImage}" alt="Credencial - Frente">
+            <a href="${frontImage}" download="credencial_frente">
+                <button>Descargar Frente</button>
+            </a>
+        </div>
+        <div class="credential-section">
+            <img src="${backImage}" alt="Credencial - Dorso">
+            <a href="${backImage}" download="credencial_dorso">
+                <button>Descargar Dorso</button>
+            </a>
+        </div>
+    `;
+    
+    // Hacemos que el contenedor con las imágenes aparezca en la parte superior
+    displayCredentials.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Función para ocultar las credenciales al hacer clic en el botón "Salir"
+function closeCredentials() {
+    const displayCredentials = document.getElementById('displayCredentials');
+    displayCredentials.innerHTML = '';  // Limpia el contenido del contenedor de credenciales
+}
+
+displayItem(categories);
+    </script>
+
+
+
+
+    <script src="searchengine.js"></script>
+</body>
+
+</html>
